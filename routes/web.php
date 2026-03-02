@@ -7,6 +7,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('annonces', AnnonceController::class);
-Route::get('annonces/dashboard', [AnnonceController::class, 'dashboard'])
+Route::get('dashboard', [AnnonceController::class, 'dashboard'])
    ->name('annonces.dashboard');
+
+Route::resource('annonces', AnnonceController::class);
